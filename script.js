@@ -1,4 +1,4 @@
-
+alert ("Welcome to matthews book of friends and enimies")
 var FIDH = 
 [
 	{
@@ -62,21 +62,75 @@ var FIDH =
         stillfriends: true
 	}	
 ]
+//the functions of the site
 
-
-
-function outPut() 
+function printAll() 
 {
-	//Loop through array and print out statements
+    var friendInfoAllMain = document.createElement("div");
+    friendInfoAllMain.innerHTML = "oh beans"
+    friendInfoAllMain.id = "mainAll";
+    document.body.appendChild(friendInfoAllMain);
     for(i = 0; i < FIDH.length; i++) 
     {
+
+
         if(FIDH[i].stillfriends === true) 
         {
-			console.log(FIDH[i].name);
+			var friendInfoAll = document.createElement("div");
+            friendInfoAll.innerHTML = FIDH[i].name;
+            friendInfoAll.id = "infoAllPerson" + i;
+            document.getElementById("mainAll").appendChild(friendInfoAll);
         } 
         else 
         {
-			console.log(FIDH[i].name + "kill them");
+            var friendInfoAll = document.createElement("div");
+            friendInfoAll.innerHTML = FIDH[i].name + " Ended";
+            friendInfoAll.id = "infoAllPerson" + i;
+            document.getElementById("mainAll").appendChild(friendInfoAll);
 		}
-	}
+    }
+
 }
+function deleteAll() 
+{
+    var delAll = document.getElementById("mainAll");
+    delAll.parentNode.removeChild(delAll);
+}
+
+
+
+
+
+
+function findFriend()
+{
+    var frenName = prompt ("What is the friends name?");
+
+
+
+    var searchFriend = document.createElement("div");
+    searchFriend.innerHTML = "oh beans2"
+    searchFriend.id = "sFriendMain";
+    document.body.appendChild(searchFriend);
+
+    for(i = 0; i < FIDH.length; i++) 
+    {
+        if(FIDH[i].name == frenName) 
+        {
+            var divv = document.createElement("div");
+            divv.innerHTML = FIDH[i].name;
+            divv.id = "findFriend";
+            document.getElementById("sFriendMain").appendChild(divv);
+        }
+    }
+}
+function deleteFriendFind() 
+{
+    var delAll = document.getElementById("sFriendMain");
+    delAll.parentNode.removeChild(delAll);
+}
+
+
+
+
+//the adding function

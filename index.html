@@ -4,22 +4,21 @@
         <script src="script.js"></script>
         <title>List of friends i dont have</title>
         <style>
-        head
-        {
-            word-break: break-all;
-        }
+
+
         </style>
     </head>
     <body>
-        <p id="anchor">click the button you fool!</p>
-        <button onclick="outPut()">Click me or DIE!</button>
 
-        <script>
-            function myFunction()
-                {
-                    document.getElementById("anchor").innerHTML = "Javascript Knowladge == money ---> True";
-                }
-            
-        </script>
+
+        <button onclick="printAll()">Show all friends</button>
+        <button onclick="deleteAll()">Collapse all friends</button>
+        <br><br>
+        <button onclick="findFriend()">Search for friend</button>
+        <button onclick="deleteFriendFind()">Collapse friend</button>
+        <br><br>
+        <button onclick="adder()">Add friend</button>
+        <button onclick="deleter()">Delete friend</button>
+
     </body>
 </html>
