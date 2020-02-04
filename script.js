@@ -58,10 +58,13 @@ var FIDH =
     {
 		name: 'Vassili',
 		value: '$1234',
-        defFeature: 'Russian ',
+        defFeature: 'Russian',
         stillfriends: true
 	}	
 ]
+
+var newFriend = {name:"", value:"", defFeature:"", stillfriends:""};
+
 //the functions of the site
 
 function printAll() 
@@ -118,7 +121,7 @@ function findFriend()
         if(FIDH[i].name == frenName) 
         {
             var divv = document.createElement("div");
-            divv.innerHTML = FIDH[i].name;
+            divv.innerHTML = FIDH.name;
             divv.id = "findFriend";
             document.getElementById("sFriendMain").appendChild(divv);
         }
@@ -134,3 +137,27 @@ function deleteFriendFind()
 
 
 //the adding function
+function adder()
+{
+    var tempBool = prompt("1 for friend 2 for foe");
+
+    if (tempBool == 1)
+    {
+        sFriend = true
+    }
+    else
+    {
+        sFriend = false
+    }
+
+    var temp=
+    {
+    name: prompt ("what is the name of this \"friend\""),
+    value: prompt ("what is this persons value"),
+    defFeature: prompt ("what is the definig feature of this person"),
+    stillfriends: sFriend
+    };
+
+   
+    FIDH.unshift(temp);
+}
